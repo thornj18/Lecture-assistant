@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_attendence"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tz.co.hapa.lecturerassistant.TakeAttendance">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:weightSum="1">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/edt_period_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Number of Periods:"
+                android:inputType="number"
+                android:textColor="#000"
+                android:textColorHint="#000" />
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+
+        android:id="@+id/list_take_attendance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_submit_attendance"
+        android:layout_below="@+id/linearLayout"
+        android:padding="8dp" />
+
+    <Button
+        android:id="@+id/btn_submit_attendance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:text="SUBMIT ATTENDANCE" />
+
+</RelativeLayout>
